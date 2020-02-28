@@ -19,9 +19,10 @@ const Login = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axiosWithAuth().post('/api/login').then(res => {
-      console.log(res)
+    axiosWithAuth().post('login', login).then(res => {
+      // console.log(res)
       localStorage.setItem('token', res.data.payload)
+      props.history.push('/bubbles')
     })
     .catch(err => console.log(err))
   }
