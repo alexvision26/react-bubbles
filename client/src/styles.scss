@@ -53,6 +53,26 @@ body,
   color: rgb(216, 87, 87);
 }
 
+.new-colors {
+  margin: 1% auto;
+  
+  input {
+    margin: 2% auto;
+  }
+  button {
+    width: 40%;
+    margin: 1% auto;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 2%;
+  margin: 3% 1%;
+}
+
 .color-box {
   height: 16px;
   width: 16px;
