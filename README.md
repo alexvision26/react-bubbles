@@ -27,9 +27,23 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+
+A token is used for authentification of a user to access data within a server. The token is basically a key given to the user after providing matching credentials that allows them to access private data.
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+Steps you can take to make web apps more secure it using encrypted password protection through tokens, using an SSL on your website. Having a secured server.
+
 - [ ] Describe how web servers work.
+
+Web servers work as a storage of websites, programs and applications that people access through the world wide web. Web servers communicate with out modems which transfer to our computers information that we request. Whenever anything is click or typed on our end, like google.com for example, an HTTP request is sent to google's server in which is returns our request with the webpage or with an error.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Create C - This can be mapped to the POST functionality within axios.
+Read R - This is basically the retrieval of information for viewing and displaying. This can be mapped to the GET functionality.
+Update U - Used for manipulating data within a server. This can be mapped to PUT functionality.
+Delete D - Used for removing specified data within the server. This can be mapped to the DELETE functionality.
 
 
 ## Project Set Up
@@ -42,7 +56,7 @@ Follow these steps to set up and work on your project:
 - [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [x] Implement the project on this Branch, committing changes regularly.
 - [x] Push commits: git push origin `<firstName-lastName>`.
-- [ ] **RUN** `npm install` at the root to retrieve all the dependencies for the node server. You will not need to create any react apps here nor will you need to install any other dependencies. You should have all you need in this repo.
+- [x] **RUN** `npm install` at the root to retrieve all the dependencies for the node server. You will not need to create any react apps here nor will you need to install any other dependencies. You should have all you need in this repo.
 - [x] **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
 - [x] **RUN** `npm start` to get your API up and running on `http://localhost:5000`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
 - [x] **LOOK** at your `client` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
@@ -51,9 +65,9 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
-- [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [x] Add your Project Manager as a Reviewer on the Pull-request
+- [x] PM then will count the HW as done by  merging the branch back into master.
 
 ## Minimum Viable Product
 
@@ -86,7 +100,7 @@ Build a login form to authenticate your users.
 
 **HTTP/Axios Stretch Problems**
 
-- [ ] Build a form at the bottom of `ColorList.js` to add new colors to the colors data
+- [x] Build a form at the bottom of `ColorList.js` to add new colors to the colors data
 
 **Data Visualization**
 
