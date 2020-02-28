@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const initialColor = {
   color: "",
   code: { hex: "" }
 };
 
-const ColorList = ({ colors, updateColors }) => {
-  console.log(colors);
+const ColorList = ({ colors, updateColors, update }) => {
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
 
@@ -21,10 +21,25 @@ const ColorList = ({ colors, updateColors }) => {
     // Make a put request to save your updated color
     // think about where will you get the id from...
     // where is is saved right now?
+    axiosWithAuth().put(`colors/${colorToEdit.id}`, colorToEdit).then(res => {
+      // console.log(res.data)
+      updateColors(colors)
+      update(true)
+      setEditing(false)
+      update(false)
+    })
+    .catch(err => console.log(err))
   };
 
   const deleteColor = color => {
     // make a delete request to delete this color
+    axiosWithAuth().delete(`colors/${colorToEdit.id}`).then(res => {
+      console.log(res)
+      updateColors(colors.filter(item => item.id !== color.id))
+      update(true)
+      setEditing(false)
+      update(false)
+    }).catch(err => console.log(err))
   };
 
   return (
@@ -77,6 +92,7 @@ const ColorList = ({ colors, updateColors }) => {
           <div className="button-row">
             <button type="submit">save</button>
             <button onClick={() => setEditing(false)}>cancel</button>
+            <button onClick={() => deleteColor()}>delete</button>
           </div>
         </form>
       )}
