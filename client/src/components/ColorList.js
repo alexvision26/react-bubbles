@@ -127,7 +127,7 @@ const ColorList = ({ colors, updateColors, update }) => {
         <input type='color' name='colorhex' onChange={handleHex} placeholder='#000000'/>
         <button>Add color</button>
       </form>
-      <div className="spacer" />
+      {/* <div className="spacer" /> */}
       {/* stretch - build another form here to add a color */}
       
     </div>

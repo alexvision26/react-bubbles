@@ -29,14 +29,14 @@ const Login = props => {
 
 
   return (
-    <>
+    <div className='login-form'>
       <h1>Welcome to the Bubble App!</h1>
       <form onSubmit={handleSubmit}>
         <label>Username: <input type='text' name='username' onChange={handleChange}></input></label>
         <label>Password: <input type='password' name='password' onChange={handleChange}></input></label><br/>
         <button>Log in</button>
       </form>
-    </>
+    </div>
   );
 };
 

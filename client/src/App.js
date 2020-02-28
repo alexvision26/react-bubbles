@@ -10,12 +10,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
           <div className='links'>
-          <Link to='/'>Login</Link>
-          <Link to='/bubbles'>Bubbles</Link>
+          <Link to='/'><h4>Login</h4></Link>
+          <h4><Link to='/bubbles'>Bubbles</Link></h4>
+          <h2 className='title'>Bubble<span className='app-title'>App</span></h2>
           </div>
-        </nav>
         <Route exact path="/" component={Login} />
         {/* 
           Build a PrivateRoute component that will 
